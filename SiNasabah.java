@@ -4,6 +4,7 @@ public class SiNasabah {
     private String pesan;
     private String nameNasabah;
     int noUrut=0;
+    final int minimum = 50000;
     
     public void dataNasabah(String name){
         nameNasabah=name;
@@ -19,7 +20,7 @@ public class SiNasabah {
          return pesan;
      }
     public int tarikUang(int money){
-        if(saldo- money < 50 ){
+        if(saldo- money < minimum ){
             System.out.println(" Saldo tidak mencukupi.");
             return saldo;
         }else{
@@ -30,7 +31,7 @@ public class SiNasabah {
         
     }
      public int tarikUang(int money, String isi){
-        if(saldo - money < 50 ){
+        if(saldo - money < minimum ){
             System.out.println(" Saldo tidak mencukupi.");
             return saldo;
         }else{
